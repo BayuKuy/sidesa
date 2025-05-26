@@ -10,6 +10,9 @@
      <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
      <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -260,28 +263,41 @@
     </div>
 
     <!-- Pengumuman Berita -->
-
-    <div class="news-section" id="pengumuman" data-aos="fade-left">
-    <div class="container" data-aos="fade-right">
-        <h1>Pengumuman & Berita Terkini</h1>
-        <div class="news-cards">
-            <div class="news-card">
-                <img src="assets/img/got.jpeg" alt="Berita 1">
-                <h3>Gotong Royong Bersihkan Selokan</h3>
-                <p>Warga Desa Andir bergotong royong membersihkan selokan dalam rangka menjaga kebersihan dan kesehatan lingkungan sekitar.</p>
-            </div>
-            <div class="news-card">
-                <img src="assets/img/sem.jpeg" alt="Berita 2">
-                <h3>Pembagian BLT Tahap II</h3>
-                <p>Pemerintah Desa Andir telah menyalurkan Bantuan Langsung Tunai (BLT) kepada warga yang membutuhkan tahap kedua.</p>
-            </div>
-            <div class="news-card">
-                <img src="assets/img/umkm.jpeg" alt="Berita 3">
-                <h3>Pelatihan UMKM untuk Ibu Rumah Tangga</h3>
-                <p>Desa Andir mengadakan pelatihan kewirausahaan untuk mendukung UMKM dan meningkatkan pendapatan keluarga.</p>
-            </div>
-        </div>
+     <!-- Swiper Container -->
+    <h1 style="text-align:center; margin-bottom:20px;" data-aos="flip-right">Pengumuman & Berita Terkini</h1>
+<div class="swiper newsSwiper" id="pengumuman">
+    
+  <div class="swiper-wrapper">
+    
+    <!-- Slide 1 -->
+    <div class="swiper-slide news-card" data-aos="fade-right">
+      <img src="assets/img/got.jpeg" alt="Berita 1" />
+      <h3>Gotong Royong Bersihkan Selokan</h3>
+      <p>Warga Desa Andir bergotong royong membersihkan selokan dalam rangka menjaga kebersihan dan kesehatan lingkungan sekitar.</p>
     </div>
+
+    <!-- Slide 2 -->
+    <div class="swiper-slide news-card" data-aos="fade-right">
+      <img src="assets/img/sem.jpeg" alt="Berita 2" />
+      <h3>Pembagian BLT Tahap II</h3>
+      <p>Pemerintah Desa Andir telah menyalurkan Bantuan Langsung Tunai (BLT) kepada warga yang membutuhkan tahap kedua.</p>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="swiper-slide news-card" data-aos="fade-right">
+      <img src="assets/img/umkm.jpeg" alt="Berita 3" />
+      <h3>Pelatihan UMKM untuk Ibu Rumah Tangga</h3>
+      <p>Desa Andir mengadakan pelatihan kewirausahaan untuk mendukung UMKM dan meningkatkan pendapatan keluarga.</p>
+    </div>
+    
+    <!-- Tambahkan slide lain jika ada -->
+  </div>
+
+  <!-- Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
+
 </div>
 
 <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -333,7 +349,7 @@
 
 
     <!-- footer -->
-     <div class="footer">
+     <div class="footer" data-aos="flip-right">
         <div class="container">
             <div class="footer-box">
                 <div class="box">
@@ -382,5 +398,28 @@
     AOS.init();
   </script>
  <script src="disc/js/script.js"></script>
+ <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Inisialisasi Swiper -->
+<script>
+  var swiper = new Swiper(".newsSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
