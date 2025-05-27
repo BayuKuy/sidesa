@@ -232,7 +232,7 @@ align-items: center;
     font-size: 20px;
     padding-top: 20px;
     line-height: 1.8;
-    color:rgba(0, 0, 0, 0.8);
+    color:rgba(0, 0, 0, 1);
     font-weight: 100;
     --animate-delay:3s ;
 }
