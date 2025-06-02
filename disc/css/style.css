@@ -361,6 +361,43 @@ align-items: center;
 } 
 
 
+/* visi dan misi */
+.visi-misi {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.visi-misi h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.visi-misi .visi, .visi-misi .misi {
+  margin-bottom: 30px;
+}
+
+.visi-misi h2 {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.visi-misi p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.visi-misi ol {
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+
+
 /* Partners */
 .partners {
     padding-top: 100px;
